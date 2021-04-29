@@ -1,0 +1,30 @@
+<form (ngSubmit)="izmijeni()" ngNativValidate>
+    <h3>Izmjena kupovina</h3>
+    <div>
+        <label>ID: <input type="number" [(ngModel)]="kupovina.id" name="id" required></label>
+    </div>
+    <div>
+        <label>Datum kupovine: <input type="datetime" [(ngModel)]="kupovina.datumKupovine" name="datumKupovine" required></label>
+    </div>
+    <div>
+        <label>Kolicina: <input type="number" [(ngModel)]="kupovina.kolicina" name="kolicina" required></label>
+    </div>
+    <div>
+        <label>Kupac: 
+            <select name="kupac" [(ngModel)]="kupovina.kupac" required>
+                <option *ngFor="let kupac of kupacServis.getAll()" [ngValue]="kupac">{{kupac.ime}} {{kupac.prezime}}</option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <label>Proizvod: 
+            <select name="proizvod" [(ngModel)]="kupovina.proizvod" required>
+                <option *ngFor="let proizvod of proizvodServis.getAll()" [ngValue]="proizvod">{{proizvod.naziv}}</option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <input type="submit" value="izmijeni kupovinu">
+    </div>
+</form>
+

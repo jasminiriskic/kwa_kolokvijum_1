@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Email</th>
+            <th>Akcije</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let kupac of kupciServis.getAll()">
+            <td>{{kupac.id}}</td>
+            <td>{{kupac.ime}}</td>
+            <td>{{kupac.prezime}}</td>
+            <td>{{kupac.email}}</td>
+            <td><button (click)="kupciServis.delete(kupac.id)">Obrisi</button><button (click)="izmijeni(kupac)">Izmijeni</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,24 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Datum kupovine</th>
+            <th>Kolicina</th>
+            <th>Kupac</th>
+            <th>Proizvod</th>
+            <th>Akcije</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let kupovina of kupovineServis.getAll()">
+            <td>{{kupovina.id}}</td>
+            <td>{{kupovina.datumKupovine}}</td>
+            <td>{{kupovina.kolicina}}</td>
+            <td>{{kupovina.kupac.ime}} {{kupovina.kupac.prezime}}</td>
+            <td>{{kupovina.proizvod.naziv}}</td>
+            <td><button (click)="kupovineServis.delete(kupovina.id)">Obrisi</button><button (click)="izmijeni(kupovina)">Izmijeni</button></td>
+        </tr>
+    </tbody>
+</table>
+
+

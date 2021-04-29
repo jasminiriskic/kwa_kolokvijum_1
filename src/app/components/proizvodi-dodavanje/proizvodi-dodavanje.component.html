@@ -1,0 +1,19 @@
+<form (ngSubmit)="dodaj()" ngNativValidate>
+    <h3>Dodavanje proizvoda</h3>
+    <div>
+        <label>ID: <input type="number" [(ngModel)]="proizvod.id" name="id" required></label>
+    </div>
+    <div>
+        <label>Naziv: <input type="text" [(ngModel)]="proizvod.naziv" name="naziv" required></label>
+    </div>
+    <div>
+        <label>Opis: <input type="text" [(ngModel)]="proizvod.opis" name="opis" required></label>
+    </div>
+    <div>
+        <label>Cena: <input type="number" [(ngModel)]="proizvod.cena" name="cena" required></label>
+    </div>
+    <div>
+        <input type="submit" value="Dodaj proizvod">
+    </div>
+</form>
+

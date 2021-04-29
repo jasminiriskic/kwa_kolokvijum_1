@@ -1,0 +1,18 @@
+<form (ngSubmit)=" izmijeni()" ngNativValidate>
+    <h3>Izmjena kupaca</h3>
+    <div>
+        <label>ID: <input type="number" [(ngModel)]="kupac.id" name="id" required></label>
+    </div>
+    <div>
+        <label>Ime: <input type="text" [(ngModel)]="kupac.ime" name="ime" required></label>
+    </div>
+    <div>
+        <label>Prezime: <input type="text" [(ngModel)]="kupac.prezime" name="prezime" required></label>
+    </div>
+    <div>
+        <label>Email: <input type="email" [(ngModel)]="kupac.email" name="email" required></label>
+    </div>
+    <div>
+        <input type="submit" value="Izmijeni kupca">
+    </div>
+</form>
